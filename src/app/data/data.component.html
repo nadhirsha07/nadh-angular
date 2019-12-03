@@ -1,0 +1,52 @@
+<p>
+ Employee Details
+</p>
+<hr>
+Name of the employee is : <b>{{Name}}</b><br>
+Age of the employee is :<b>{{Age}}</b><br>
+Mailid of the employee is :<b>{{Mailid}}</b><br>
+Permanent Address of employee :<b>{{Address.Hname}},{{Address.Street}},{{Address.Location}},{{Address.Pincode}}</b><br>
+
+Hobbies : 
+<ul>
+  <li *ngFor="let hb of Hobbies">{{hb}}</li>
+</ul>
+
+<table border="1">
+  <tr>
+  <td *ngFor="let i of Hobbies">{{i}}</td></tr>
+</table>
+
+
+
+<table border="1">
+    <tr>
+    <td *ngFor="let hb of Hobbies">{{hb}}</td></tr>
+  </table><br>
+
+
+
+ <b> Projects : </b><table border="1">
+    <tr>
+      <td>Project Name</td>
+      <td>Dprt.</td>
+      <td>Status </td>
+    </tr>
+    <tr *ngFor="let Pro of Projects">
+      <td >{{Pro.Title}}</td>
+      <td >{{Pro.Dpt}}</td>
+      <td >{{Pro.Status}}</td></tr>
+    </table>
+    <div> Enter the Project
+      <h4>Enter the Name {{Name}}</h4>
+      <input type="text" name="txtprd" [(ngModel)]="Name"/>
+      <h4>Enter Dprt. is {{Dpt}}</h4>
+      <input type="text" name="txtprd" [(ngModel)]="Dpt"/>
+      <h4>Status{{Status}}</h4>
+      <input type="text" name="txtprd" [(ngModel)]="Status"/>
+    </div>
+    <input type="button" value="Add More Details" (click)="add()">
+
+
+    
+  

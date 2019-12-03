@@ -1,0 +1,27 @@
+<p>
+    Shopping Cart
+   </p>
+   <hr>
+   
+Products : 
+   <table *ngIf="show">
+     
+    <tr *ngFor="let Pr of Products; let i =index">
+    <td>{{Pr}}</td>
+  <input type="button" value="X" (click)="del(i)">
+</tr>
+</table>
+<div>
+  <h2>New Product is{{pname}}</h2> 
+  <input type="button" value={{pname}}> 
+
+  <h2>Enter the Product Name{{pname}}</h2>   
+<input type="text" name="txtprd" [(ngModel)]="pname"/> 
+</div>
+<br>
+<input type="button" value="Add More Products" (click)="Add()">
+<input type="button" value="Show Products" (click)="showtable()">
+
+   
+       
+     

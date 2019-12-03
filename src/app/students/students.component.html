@@ -1,0 +1,22 @@
+<p>
+  students works!
+</p>
+<hr>
+<table border="1">
+  <tr>
+<td>Name  : <b>{{Name}}</td>
+<td>Age  :<b>{{Age}}</td>
+<td>DOB :<b>{{DOB}}</td>
+<td>Mailid  :<b>{{Mailid}}<td>
+<td>State  :<b>{{State}}</td>
+<td>Gender :<b>{{Gender}}</td>
+</tr>
+<tr *ngFor="let Stu of Students.lenght=1">
+  <td >{{Stu.Name}}</td>
+      <td >{{Stu.Age}}</td>
+      <td >{{Stu.DOB}}</td>
+      <td >{{Stu.Mailid}}</td>
+      <td >{{Stu.State}}</td>
+      <td >{{Stu.Gender}}</td>
+    </tr>
+    </table>
